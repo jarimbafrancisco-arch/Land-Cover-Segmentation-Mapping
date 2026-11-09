@@ -1,0 +1,9 @@
+# Data exploration
+numpy
+pandas
+matplotlib
+seaborn
+Pillow
+
+# Notebook kernel
+ipykernel

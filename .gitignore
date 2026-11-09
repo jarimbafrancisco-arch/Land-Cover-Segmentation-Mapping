@@ -1,0 +1,29 @@
+# Original data and downloaded archives
+/data/
+*.zip
+
+# Model artifacts
+/checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Local Python environments and caches
+/.venv/
+/venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Local credentials and temporary files
+.env
+.env.*
+!.env.example
+*.log
+Thumbs.db
+desktop.ini
+
+# Local AI instructions
+/AGENTS.md
+/CODEX_PROJECT_BRIEF.md
