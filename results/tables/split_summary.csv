@@ -1,0 +1,4 @@
+split,Images,Regions
+test,470,12
+train,1942,52
+validation,275,11
