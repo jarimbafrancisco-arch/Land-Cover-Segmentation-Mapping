@@ -4,34 +4,20 @@ Fontys ICT Semester 3 — Main Challenge.
 
 **Research question:** How accurately can CNN-based semantic segmentation models classify land-cover types, and how well do they generalize to unseen geographical regions?
 
-## Project folders
+## Project Overview
 
-| Folder / file | Purpose |
-| --- | --- |
-| `data/OpenEarthMap_wo_xBD/` | Original extracted dataset. Preserve these files unchanged. |
-| `docs/` | Project proposal, domain research and future reports. |
-| `notebooks/` | Future exploratory analysis and experiments. Currently empty. |
-| `src/` | Future reusable Python code. Currently empty. |
-| `tests/` | Future checks for data processing and metrics. Currently empty. |
-| `results/figures/` | Figures produced by analysis and evaluation. |
-| `results/tables/` | Inventories, class counts and measured results. |
-| `checkpoints/` | Future saved model weights. |
-| `app/` | Future demonstration application, after model validation. |
-| `AGENTS.md` | Collaboration guidelines. |
-| `CODEX_PROJECT_BRIEF.md` | Full project context and research requirements. |
+This project investigates how deep learning can identify land-cover types in aerial and satellite images. Using the OpenEarthMap dataset, it focuses on semantic segmentation: assigning a class, such as building, road, tree or water, to each pixel in an image.
 
-## Current status
+## Problem
 
-Only the project folders and documentation have been prepared. No analysis notebook, training code or application has been created as part of this setup. No models have been trained.
+Manually mapping land cover is time-consuming. Automatic classification is also challenging because different surfaces can look similar, while landscapes, lighting and image resolution vary between locations. A model that performs well on familiar regions may struggle in a new geographical area.
 
-The downloaded `OpenEarthMap.zip` matches the [official archive](https://zenodo.org/records/7223446), with MD5 `64155d1dc9d3b68536063f79878e1a67`.
+## Proposed Solution
 
-The archive contains 3,838 RGB images and 3,500 masks across 97 region folders, yielding 2,687 image/mask pairs (2,303 official training pairs and 384 validation pairs). The 1,162 missing RGB files match the xBD list; the 1,500 absent masks match the official test IDs. The original download is complete, but it does not contain 5,000 usable labeled pairs.
+The project aims to train and compare CNN-based segmentation models, starting with U-Net, and evaluate their predictions using overall and per-class metrics. Separate geographical regions will be used for training, validation and testing to assess performance on unseen locations.
 
-The original ZIP remains in Downloads; this project holds the extracted dataset. No additional dataset downloads have been made. Data licenses vary by source; consult the official dataset record before redistributing samples.
+A simple application is planned to let users upload an aerial image and view its predicted land-cover mask and class percentages.
 
-## Next step
+## Why It Matters
 
-Agree on the first small exploration step before writing code. Start with dataset paths and inventory, followed by a few image/mask examples. Full file decoding, label checks, content duplicates, class distributions and geographical split design remain to be investigated.
-
-An isolated project virtual environment has been created at `.venv/` using Python 3.14.5. Its interpreter is `.venv/Scripts/python.exe`; select it in VS Code. Only pip is installed in this environment. EDA dependencies are pending installation, and training-library compatibility has not been validated.
+Land-cover information can support environmental research and urban planning, for example by helping identify the distribution of vegetation and built surfaces. This project explores the potential and limitations of automating that analysis, with particular attention to reliability across geographical regions. Its predictions are estimates from an academic prototype, rather than validated planning evidence.
