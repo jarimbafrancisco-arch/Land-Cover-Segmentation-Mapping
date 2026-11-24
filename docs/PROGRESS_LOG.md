@@ -32,7 +32,6 @@ Updated on 18 November.
 
 ### Next Steps
 
-- Update the data analysis report with preprocessing decisions, validation evidence and limitations.
 - Define the experiment settings and evaluation protocol, keeping the geographical test split fixed.
 - Complete targeted preprocessing and metric checks, and verify the environment and available hardware before modelling.
 - Develop the U-Net baseline, check a forward/backward pass and test whether it can overfit one or two training pairs before full training.

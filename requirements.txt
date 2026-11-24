@@ -1,9 +1,19 @@
-# Data exploration
+# Direct dependencies for EDA, preprocessing and the current CNN notebooks.
+# Install the appropriate CPU/CUDA build of torch first (see README.md).
+# Recorded versions of the source PC are in docs/environment-local.txt.
+
+# Data exploration and image loading
 numpy
 pandas
 matplotlib
 seaborn
 Pillow
 
-# Notebook kernel
+# Modelling and progress bars
+torch
+tqdm
+
+# Notebook kernel, display helpers and the existing notebook runner
 ipykernel
+ipython
+jupyter-client

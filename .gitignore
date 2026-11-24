@@ -8,6 +8,10 @@
 *.pth
 *.ckpt
 
+# Local experiment outputs, checkpoints and notebook backups.
+# Transfer this directory separately when moving PCs; keep split tables in Git.
+/results/vibecode-test1/
+
 # Local Python environments and caches
 /.venv/
 /venv/

@@ -1,0 +1,13 @@
+# Project package versions recorded on 2026-11-24
+# Windows; Python 3.14.5
+# Reference only, not a full lockfile. Select CPU/CUDA for the destination PC.
+numpy==2.5.4
+pandas==3.1.1
+matplotlib==3.11.2
+seaborn==0.13.2
+Pillow==13.0.0
+torch==2.15.0+cpu
+tqdm==4.70.1
+ipykernel==7.4.0
+ipython==9.18.1
+jupyter-client==8.10.0
