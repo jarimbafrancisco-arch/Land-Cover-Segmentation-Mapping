@@ -2,9 +2,12 @@ import numpy as np
 import torch
 from PIL import Image
 from torch.utils.data import Dataset
-
+from pathlib import Path
 
 def prepare_pair(image_path, mask_path):
+
+    image_path = Path(str(image_path).replace("\\", "/"))
+    mask_path = Path(str(mask_path).replace("\\", "/"))
     with Image.open(image_path) as source:
         image = source.resize((256, 256), Image.Resampling.BILINEAR)
 
