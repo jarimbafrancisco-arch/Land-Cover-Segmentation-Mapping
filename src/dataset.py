@@ -6,10 +6,10 @@ from torch.utils.data import Dataset
 
 def prepare_pair(image_path, mask_path):
     with Image.open(image_path) as source:
-        image = source.resize((512, 512), Image.Resampling.BILINEAR)
+        image = source.resize((256, 256), Image.Resampling.BILINEAR)
 
     with Image.open(mask_path) as source:
-        mask = source.resize((512, 512), Image.Resampling.NEAREST)
+        mask = source.resize((256, 256), Image.Resampling.NEAREST)
 
     image = np.array(image, dtype=np.float32) / 255
     image = image.transpose(2, 0, 1)
